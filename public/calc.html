@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI calculator</title>
+    <meta charset="UTF-8">
+    <script src="bmi.js"></script>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+<h1>Express Exam Example</h1>
+
+<section>
+    <h2>Query String</h2>
+    <p>Click the following link:</p>
+    <p>
+        <a href="/bmi?height=180&weight=80&weightUnit=0&heightUnit=1">http://dev/bmi?height=180&weight=...</a>
+    </p>
+</section>
+
+<section>
+    <h2>Form Submission</h2>
+    <form method="post" action="/bmi">
+        <p>
+            <label>
+                <span>Height</span>
+                <input type="number" name="height">
+            </label>
+            <label>
+                <select name="heightUnit">
+                    <option value="0">cm</option>
+                    <option value="1">m</option>
+                    <option value="2">Inch</option>
+                    <option value="3">Foot</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <label>
+                <span>Weight</span>
+                <input type="number" name="weight">
+            </label>
+            <label>
+                <select name="weightUnit">
+                    <option value="0">Kg</option>
+                    <option value="1">g</option>
+                    <option value="2">lbs</option>
+                </select>
+            </label>
+        </p>
+        <p>
+            <button type="submit">Calculate</button>
+        </p>
+    </form>
+</section>
+
+
+</body>
+</html>
