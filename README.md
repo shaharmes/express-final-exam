@@ -42,6 +42,8 @@ Input of `80Kg weight` and `180cm height` should output `bmi: 25, state: 2`
 
 [More details about the BMI calculations](#bmi-calculations)
 
+    Note: The BMI results are rounded!
+
 ---
 
 ### Implementation

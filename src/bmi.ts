@@ -2,41 +2,42 @@
  * BMI Calculator
  */
 
-export enum BmiStatus {
-    Underweight,
-    HealthyWeight,
-    Overweight,
-    Obesity
+export const BmiStatus = {
+    Underweight: 0,
+    HealthyWeight: 1,
+    Overweight: 2,
+    Obesity: 3
 }
 
-export enum WeightUnits {
-    KG,     // kilograms
-    G,      // grams
-    Pound,  // lbs
+export const WeightUnits = {
+    KG: 0,     // kilograms
+    G: 1,      // grams
+    Pound: 2,  // lbs
 }
 
-export enum HeightUnits {
-    CM,     // centimeter
-    M,      // meter
-    In,     // inch
-    Ft,     // feet
+export const HeightUnits = {
+    CM: 0,     // centimeter
+    M: 1,      // meter
+    In: 2,     // inch
+    Ft: 3,     // feet
 }
 
 export interface BmiInput {
     weight: number;
-    weightUnit: WeightUnits;
+    weightUnit: number;
     height: number;
-    heightUnit: HeightUnits;
+    heightUnit: number;
 }
 
 export interface BmiOutput {
     bmi: number;
-    status: BmiStatus;
+    status: number;
 }
 
 /**
  * Takes a BmiInput object and return BmiOutput response
  */
 export default function bmi(input: BmiInput): BmiOutput {
+    // TODO: implement me
     return {status: 0, bmi: 0};
 }
