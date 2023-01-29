@@ -14,19 +14,16 @@ describe('E2E (endpoints testing)', () => {
 
     describe('POST', () => {
         it('should response to FORM data', () => {
-            console.log(FormPayload);
             return request(app)
                 .post('/bmi')
                 .send(FormPayload)
-                // .set('source', 'x-calc-bmi-55')
-                .expect(500);
+                .expect(200);
         });
 
         it.skip('should response to JSON data', () => {
             return request(app)
                 .post('/bmi')
                 .set('content-type', 'application/json')
-                .set('source', 'x-calc-bmi-12')
                 .send(ValidRequestPayload)
                 .expect(200);
         });
